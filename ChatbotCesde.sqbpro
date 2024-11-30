@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/desarrollo/Desktop/chatbotCesde/ChatbotCesde.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1454"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainChatbot"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Chatbot" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="44"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">DROP TABLE IF EXISTS Chatbot;
+
+
+CREATE TABLE Chatbot (
+Id INT PRIMARY KEY,
+NumeroOpcion Varchar(30) NOT NULL,
+Pregunta VARCHAR(100) NOT NULL,
+Respuesta VARCHAR (200) NOT NULL,
+Categorias VARCHAR (50) NOT NULL,
+Fecha DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Chatbot (Id,NumeroOpcion, Pregunta, Respuesta, Categorias) VALUES
+(1, '1', 'Consultar notas', 'Consulta tus notas aquí: (https://cesde.edu.co/mis-calificaciones).', 'notas'),
+(2, '2', 'Pagar crédito CESDE', 'Para pagar tu crédito CESDE, haz clic aquí: [Pagar crédito](https://cesde.edu.co/pagar-credito).', 'pago crédito'),
+(3, '3', 'Recomendaciones de cursos', 'Ver recomendaciones de cursos: [Ver cursos](https://cesde.edu.co/recomendaciones).', 'sistema de recomendaciones'),
+(4, '4', 'Consultar horarios', 'Consulta los horarios de clases aquí: [Ver horarios](https://cesde.edu.co/horarios).', 'horarios'),
+(5, '5', '¿Cómo contactar soporte técnico?', 'Puedes contactar soporte técnico a través de [Soporte Técnico CESDE](https://cesde.edu.co/soporte).', 'soporte técnico'),
+(6, '6', '¿Qué programas ofrece CESDE?', 'Para ver todos los programas académicos, visita nuestra página: [Programas CESDE](https://cesde.edu.co/programas).', 'programas'),
+(7, '7', '¿Cómo ver mi historial académico?', 'Consulta tu historial académico desde aquí: [Historial académico](https://cesde.edu.co/historial-academico).', 'historial académico'),
+(8, '8', '¿Cómo cambiar mi contraseña?', 'Para cambiar tu contraseña, sigue estos pasos: [Cambiar contraseña](https://cesde.edu.co/cambiar-contraseña).', 'cambio de contraseña'),
+(9, '9', 'Descargar certificado', 'Para descargar tu certificado, sigue este enlace: [Descargar certificado](https://cesde.edu.co/descargar-certificado).', 'certificado');
+
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
